@@ -31,7 +31,10 @@ gulp.task('serve', ['build'], function() {
 
 });
 
-const watcher = gulp.watch('index.html', ['build']);
+const watcher = gulp.watch(
+  ['index.html', 'app/**/*'], 
+  ['build']
+);
 watcher.on('change', function(event) {
   console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
 });
