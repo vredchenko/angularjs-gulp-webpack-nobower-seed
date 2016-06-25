@@ -68,7 +68,7 @@ gulp.task('webpack:build-dev', function(callback) {
 });
 
 gulp.task('lint', shell.task([
-  'node node_modules/eslint/bin/eslint.js ./app/**/*.js',
+  'node node_modules/eslint/bin/eslint.js ./app/**/*.js | cat',
 ]));
 
 gulp.task('less', function () {
